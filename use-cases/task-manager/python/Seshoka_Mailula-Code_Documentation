@@ -1,15 +1,13 @@
-# Code Documentation Journal: Technical Docstring Challenge
+V# Code Documentation Journal: Technical Docstring Challenge
 
 **Course Module:** Using GenAI to Support Software Development  
 **Student Name:** Seshoka Mailula  
-**Student Email:** [smailula40@ai.wethinkcode.co.za](mailto:smailula40@ai.wethinkcode.co.za)  
+**Student Email:** smailula40@ai.wethinkcode.co.za  
 **Date:** May 2026  
 
 ---
 
-## Section 1: Original Undocumented Source Code
-
-The following implementation is extracted directly from the codebase file `task_priority.py` for targeted evaluation:
+##  Section 1: Original Undocumented Source Code
 
 ```python
 def calculate_task_score(task):
@@ -46,13 +44,9 @@ def calculate_task_score(task):
         score += 5
 
     return score
-```
-
----
 
 ##  Section 2: Comprehensive Python PEP 257 Docstring Specification
 
-```python
 def calculate_task_score(task) -> int:
     """
     Calculates a dynamic importance metric score for a given task entity.
@@ -92,9 +86,6 @@ def calculate_task_score(task) -> int:
     * Due date differentials drop hours and extract structural days intervals via `.days`.
     * Completed tasks receive an aggressive status penalty (-50) to filter them down display priorities.
     """
-```
-
----
 
 ## Section 3: High-Level Intent, Logic, and Refactoring Insights
 
@@ -102,21 +93,19 @@ def calculate_task_score(task) -> int:
 The algorithm establishes an automated, objective routing priority engine. Instead of forcing manual ranking, it synthesizes separate data states (deadlines, operational blocks, and lifecycle progression) into a single comparable integer, ensuring critical bottlenecks naturally surface to the top of terminal display interfaces.
 
 ### 3.2 Step-by-Step Logic Breakdown
-- Base Generation: Maps the enum assignment to a tens-multiplier baseline (e.g., Medium maps to 2, yielding 20 points).
-- Proximity Addition: Runs standard linear timing differentials. Overdue tasks are pushed hardest (+35), with diminishing increments out to a rolling 7-day limit.
-- Lifecycle Attenuation: Actively counteracts accumulation trends by subtracting points if an item enters REVIEW (-15) or hits DONE (-50).
-- Keyword Interception: Iterates through collection structures via short-circuit generator expressions, searching for systemic flags to inject a uniform static bump (+8).
-- Recency Bonus: Rewards immediate interaction loops by adding points (+5) if a write mutation occurred within the past 24 hours.
+* **Base Generation:** Maps the enum assignment to a tens-multiplier baseline (e.g., Medium maps to 2, yielding 20 points).
+* **Proximity Modification:** Runs standard linear timing differentials. Overdue tasks are pushed hardest (+35), with diminishing increments out to a rolling 7-day limit.
+* **Lifecycle Attenuation:** Actively counteracts accumulation trends by subtracting points if an item enters REVIEW (-15) or hits DONE (-50).
+* **Keyword Interception:** Iterates through collection structures via short-circuit generator expressions, searching for systemic flags to inject a uniform static bump (+8).
+* **Recency Bonus:** Rewards immediate interaction loops by adding points (+5) if a write mutation occurred within the past 24 hours.
 
 ### 3.3 Assumptions and Edge Cases Identified
-- Negative Bounds Assumption: The code assumes that downstream visualization lists handle negative sorting integers safely. For instance, a low-priority task with no due date drops below zero ($10 - 50 = -40$) upon completion.
-- Timsort Stability and Mutability: The sorting container companion function `sort_tasks_by_importance` evaluates values via a generated list comprehension tuple pass. This guarantees standard stable Timsort execution characteristics but scales processing demands dynamically since scores are calculated line-by-line during runtime invocations.
+* **Negative Bounds Assumption:** The code assumes that downstream visualization lists handle negative sorting integers safely. For instance, a low-priority task with no due date drops below zero ($10 - 50 = -40$) upon completion.
+* **Timsort Stability and Mutability:** The sorting container companion function sort_tasks_by_importance evaluates values via a generated list comprehension tuple pass. This guarantees standard stable Timsort execution characteristics but scales processing demands dynamically since scores are calculated line-by-line during runtime invocations.
 
 ---
 
-## Section 4: Final Combined Production Code Presentation
-
-This production-ready block merges the comprehensive documentation with clean inline logical commentary:
+##  Section 4: Final Combined Production Code Presentation
 
 ```python
 def calculate_task_score(task) -> int:
@@ -176,6 +165,5 @@ def calculate_task_score(task) -> int:
         score += 5  # Hot-task activity amplification
 
     return score
-```
 
-***
+
