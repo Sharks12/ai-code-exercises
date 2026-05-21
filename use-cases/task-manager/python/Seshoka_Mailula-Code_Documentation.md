@@ -6,7 +6,7 @@
 
 ---
 
-## 🛠️ Section 1: Original Undocumented Source Code
+## Section 1: Original Undocumented Source Code
 
 ```python
 def calculate_task_score(task):
@@ -88,7 +88,6 @@ def calculate_task_score(task) -> int:
 
 ## Section 3: High-Level Intent, Logic, and Refactoring Insights
 
-## 🧠 Section 3: High-Level Intent, Logic, and Refactoring Insights
 
 ### 3.1 High-Level Intent
 The algorithm establishes an automated, objective routing priority engine. Instead of forcing manual ranking, it synthesizes separate data states (deadlines, operational blocks, and lifecycle progression) into a single comparable integer, ensuring critical bottlenecks naturally surface to the top of terminal display interfaces.
@@ -107,7 +106,7 @@ The algorithm establishes an automated, objective routing priority engine. Inste
 
 
 
-## Section 4: Final Combined Production Code Presentation
+##Section 4: Final Combined Production Code Presentation
 
 def calculate_task_score(task) -> int:
     """
@@ -167,7 +166,7 @@ def calculate_task_score(task) -> int:
 
     return score
 
-## 📝 Section 5: Exercise Reflection & Summary
+##  Section 5: Exercise Reflection & Summary
 
 * **Challenge Assessment:** The most challenging aspect was the "Intent" extraction. While the AI is excellent at describing *what* code does, explaining *why* certain business rules (like the -50 penalty for completed tasks) exist requires specific domain knowledge that the AI can only access if clearly prompted.
 * **Prompt Engineering Strategy:** Adding specific context—such as defining that the code expects a `Task` object with `updated_at` and `tags`—was essential to preventing the AI from hallucinating missing attributes or making incorrect assumptions about the data structure.
