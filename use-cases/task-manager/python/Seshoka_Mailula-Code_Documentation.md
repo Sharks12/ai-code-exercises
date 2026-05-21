@@ -1,13 +1,12 @@
 # Code Documentation Journal: Technical Docstring Challenge
 
-**Course Module:** Using GenAI to Support Software Development  
 **Student Name:** Seshoka Mailula  
 **Student Email:** smailula40@ai.wethinkcode.co.za  
 **Date:** May 2026  
 
 ---
 
-##  Section 1: Original Undocumented Source Code
+## 🛠️ Section 1: Original Undocumented Source Code
 
 ```python
 def calculate_task_score(task):
@@ -45,7 +44,7 @@ def calculate_task_score(task):
 
     return score
 
-##  Section 2: Comprehensive Python PEP 257 Docstring Specification
+## Section 2: Comprehensive Python PEP 257 Docstring Specification
 
 def calculate_task_score(task) -> int:
     """
@@ -89,6 +88,8 @@ def calculate_task_score(task) -> int:
 
 ## Section 3: High-Level Intent, Logic, and Refactoring Insights
 
+## 🧠 Section 3: High-Level Intent, Logic, and Refactoring Insights
+
 ### 3.1 High-Level Intent
 The algorithm establishes an automated, objective routing priority engine. Instead of forcing manual ranking, it synthesizes separate data states (deadlines, operational blocks, and lifecycle progression) into a single comparable integer, ensuring critical bottlenecks naturally surface to the top of terminal display interfaces.
 
@@ -101,13 +102,13 @@ The algorithm establishes an automated, objective routing priority engine. Inste
 
 ### 3.3 Assumptions and Edge Cases Identified
 * **Negative Bounds Assumption:** The code assumes that downstream visualization lists handle negative sorting integers safely. For instance, a low-priority task with no due date drops below zero ($10 - 50 = -40$) upon completion.
-* **Timsort Stability and Mutability:** The sorting container companion function sort_tasks_by_importance evaluates values via a generated list comprehension tuple pass. This guarantees standard stable Timsort execution characteristics but scales processing demands dynamically since scores are calculated line-by-line during runtime invocations.
+* **Timsort Stability and Mutability:** The sorting container companion function `sort_tasks_by_importance` evaluates values via a generated list comprehension tuple pass. This guarantees standard stable Timsort execution characteristics but scales processing demands dynamically since scores are calculated line-by-line during runtime invocations.
 
----
 
-##  Section 4: Final Combined Production Code Presentation
 
-```python
+
+## Section 4: Final Combined Production Code Presentation
+
 def calculate_task_score(task) -> int:
     """
     Calculates a dynamic importance metric score for a given task entity.
@@ -166,4 +167,8 @@ def calculate_task_score(task) -> int:
 
     return score
 
+## 📝 Section 5: Exercise Reflection & Summary
 
+* **Challenge Assessment:** The most challenging aspect was the "Intent" extraction. While the AI is excellent at describing *what* code does, explaining *why* certain business rules (like the -50 penalty for completed tasks) exist requires specific domain knowledge that the AI can only access if clearly prompted.
+* **Prompt Engineering Strategy:** Adding specific context—such as defining that the code expects a `Task` object with `updated_at` and `tags`—was essential to preventing the AI from hallucinating missing attributes or making incorrect assumptions about the data structure.
+* **Future Application:** This approach is highly valuable for "backfilling" documentation for legacy codebases. It allows developers to safely refactor and improve performance without breaking existing business logic by providing a clear understanding of the original implementation's purpose.
