@@ -6,7 +6,7 @@
 
 ---
 
-## 🛠️ Section 1: Original API Endpoint Code
+##  Section 1: Original API Endpoint Code
 
 ```python
 @app.route('/api/users/register', methods=['POST'])
@@ -110,7 +110,7 @@ paths:
         '409': {description: "Conflict"}
         '500': {description: "Server error"}
 
-## 📖 Section 4: Developer Usage Guide
+## Section 4: Developer Usage Guide
 
 1.  **Authentication:** No authentication is required for this public registration endpoint.
 2.  **Request Format:** Send a `POST` request with a `Content-Type: application/json` header and a valid JSON body.
@@ -119,7 +119,7 @@ paths:
 
 ---
 
-## 🚀 Section 5: Exercise Reflection
+##  Section 5: Exercise Reflection
 
 * **Most challenging part:** Distinguishing between API business rules (like password strength) and system-level errors (server errors).
 * **Prompt Engineering Strategy:** I had to explicitly ask for the error code scenarios (400, 409, 500) to ensure the documentation was comprehensive and useful for debugging.
