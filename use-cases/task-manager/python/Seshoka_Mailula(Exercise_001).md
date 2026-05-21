@@ -7,7 +7,7 @@
 
 ---
 
-## 🏛️ Exercise Part 1: Understanding Project Structure
+## Exercise Part 1: Understanding Project Structure
 
 ### 1.1 Initial vs. Final Codebase Interpretation
 * **Initial Assumption:** An initial surface inspection of the root directory files suggested a standard, multi-layered CLI utility layout. The distinct absence of a `requirements.txt` profile verified that the runtime environment functions under a strict zero-dependency constraint.
@@ -39,7 +39,7 @@ $$O_T = \text{True} \quad \text{if} \quad t_{\text{due}} < t_{\text{current}} \w
 
 ---
 
-## 🔍 Exercise Part 2: Finding Feature Implementation
+## Exercise Part 2: Finding Feature Implementation
 
 ### 2.1 Initial Codebase Search Strategy
 To identify existing file operations, a codebase-wide search pattern was simulated matching parameters: `open()`, `.json`, `save`, and `load`. This targeted text lookup isolated `storage.py` as the system's single source of disk file handling.
@@ -64,7 +64,7 @@ File system access is managed by the `TaskStorage` class operating on a local fl
 
 ---
 
-## 🔄 Exercise Part 3: Understanding Domain Model
+## Exercise Part 3: Understanding Domain Model
 
 ### 3.1 Domain Model Extraction and Fields
 The core system relies on three interconnected entities: the parent tracking object (`Task`), task priority rankings (`TaskPriority`), and lifecycle status values (`TaskStatus`). The `Task` functions as an encapsulation capsule governing internal properties, state properties, and real-time updates.
@@ -83,7 +83,7 @@ The system runs dynamic prioritization lists through a specialized service insid
 
 ---
 
-## 🧠 Exercise Part 4: Practical Application
+##  Exercise Part 4: Practical Application
 
 ### 4.1 Business Rule Assignment
 > *"Tasks that are overdue for more than 7 days should be automatically marked as abandoned unless they are marked as high priority."*
