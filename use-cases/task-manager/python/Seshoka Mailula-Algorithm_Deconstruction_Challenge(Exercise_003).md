@@ -7,14 +7,14 @@
 
 ---
 
-## 🏛️ Exercise Part 1: Selected Algorithm Identification
+##  Exercise Part 1: Selected Algorithm Identification
 
 - **Chosen Algorithm:** Algorithm 1: Task Priority Sorting Algorithm (`task_priority.py`)
 - **Core Functionality:** This module computes a dynamic, scalar integer importance score for individual task entity records by executing conditional checks across five distinct dimensions: core prioritization severity tiers, deadline parameters, current lifecycle status values, specific operational text keyword flags, and recent modification tracking timestamps.
 
 ---
 
-## 🔍 Exercise Part 2: Structural Step-by-Step Breakdown
+## Exercise Part 2: Structural Step-by-Step Breakdown
 
 The calculation pipeline runs down a clear sequence where modifiers continuously pile on top of an initially derived priority base value:
 
@@ -63,7 +63,7 @@ The execution path calculates processing delays since the last write update (`da
 
 ---
 
-## 🔄 Exercise Part 3: Operational Control Flow Diagram
+## Exercise Part 3: Operational Control Flow Diagram
 
 ```
 [ Input Task Object Stream ]
@@ -101,7 +101,7 @@ The execution path calculates processing delays since the last write update (`da
 
 ---
 
-## 🧠 Exercise Part 4: Technical Insights & Refactoring Roadmaps
+##  Exercise Part 4: Technical Insights & Refactoring Roadmaps
 
 ### 4.1 Foundational Discoveries & Code Issues
 
@@ -128,7 +128,7 @@ def sort_tasks_efficiently(tasks):
 
 ---
 
-## 📝 Reflection Responses
+## Reflection Responses
 
 **1. How did the AI's explanation change your understanding of the algorithm?**
 
