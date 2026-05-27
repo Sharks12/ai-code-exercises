@@ -20,12 +20,12 @@ def print_inventory_report(items):
     for i in range(len(items)): 
         print(f"Item {i+1}: {items[i]['name']} - Quantity: {items[i]['quantity']}")
     print("============================")
-
+---
 Learning PointsUnderstand Zero-Indexing: Always remember that the $n$-th element is located at index $n-1$.Use Pythonic Iteration: Whenever possible, avoid manual index management. Instead of range(len(items)), use for item in items: if you only need the value, or for i, item in enumerate(items): if you need both the index and the value. This significantly reduces the risk of off-by-one errors.Boundary Testing: When writing loops, explicitly test the first and last elements to ensure your loop bounds are inclusive or exclusive as intended.
 ***
 
-
-Reflection Questions (for your write-up)
+----
+Reflection Questions
 How did the AI’s explanation compare to documentation you found online?
 
 Draft Answer: The AI explanation was more concise and context-specific compared to general Python documentation (like the official docs), which focuses on the definition of an IndexError rather than the specific common pitfall of manual loop indexing.
