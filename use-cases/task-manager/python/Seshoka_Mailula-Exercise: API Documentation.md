@@ -56,7 +56,7 @@ def register_user():
 
 ---
 
-## 📝 Section 2: Comprehensive Endpoint Documentation
+## Section 2: Comprehensive Endpoint Documentation
 
 **Endpoint:** `POST /api/users/register`
 
