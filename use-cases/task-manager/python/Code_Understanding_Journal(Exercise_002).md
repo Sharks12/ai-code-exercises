@@ -6,7 +6,7 @@
 
 ---
 
-## 🏛️ Exercise Part 1: Understanding a Specific Feature (Task Creation & Updates)
+##  Exercise Part 1: Understanding a Specific Feature (Task Creation & Updates)
 
 ### 1. Component Responsibility Matrix
 The application logic handles task management commands from the terminal and stores data records locally without requiring an active external database engine. The system structure divides responsibilities across three decoupled layers:
@@ -29,7 +29,7 @@ Because standard JSON pipelines throw a `TypeError` when encountering complex ty
 
 ---
 
-## 🔍 Exercise Part 2: Deepen Understanding (Prioritization System)
+##  Exercise Part 2: Deepen Understanding (Prioritization System)
 
 ### 1. Initial Understanding vs. Actual Discoveries
 * **Initial Impression:** The prioritization system was assumed to treat task visibility rankings as static, hardcoded data parameters that remain stagnant unless a user manually updates the priority tier from the terminal interface.
@@ -44,7 +44,7 @@ Because standard JSON pipelines throw a `TypeError` when encountering complex ty
 
 ---
 
-## 🔄 Exercise Part 3: Mapping Data Flow (Task Completion)
+##  Exercise Part 3: Mapping Data Flow (Task Completion)
 
 ### 1. State Modifications
 When an item crosses the completion threshold, three explicit attributes mutate inside the `Task` entity simultaneously within `models.py`:
@@ -64,7 +64,7 @@ The codebase secures data state settings using an instant, synchronous write-thr
 
 ---
 
-## 🧠 Exercise Part 4: Technical Reflection
+##  Exercise Part 4: Technical Reflection
 
 ### 1. Core Engineering Lesson Learned
 Navigating an unfamiliar codebase without changing live lines highlighted the immense power of system isolation. Separating human input presentation constraints (`cli.py`), application blueprints (`models.py`), and storage streams (`storage.py`) ensures that changes made to one layer do not cause unintended breakages in other modules.
