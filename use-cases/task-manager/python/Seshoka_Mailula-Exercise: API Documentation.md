@@ -6,7 +6,7 @@
 
 ---
 
-##  Section 1: Original API Endpoint Code
+## Section 1: Original API Endpoint Code
 
 ```python
 @app.route('/api/users/register', methods=['POST'])
@@ -52,16 +52,18 @@ def register_user():
     except Exception as e:
         db.session.rollback()
         return jsonify({'error': 'Server error', 'message': 'Failed to register user'}), 500
+```
 
-        ## Section 2: Comprehensive Endpoint Documentation
+---
 
-        ## 📝 Endpoint Documentation: User Registration
+## 📝 Section 2: Comprehensive Endpoint Documentation
 
 **Endpoint:** `POST /api/users/register`
 
 **Purpose:** Registers a new user account by validating input, checking for existing credentials, and securing user data via hashing.
 
 ### Request Parameters
+
 | Parameter | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
 | `username` | string | Yes | Unique identifier for the user |
@@ -69,13 +71,16 @@ def register_user():
 | `password` | string | Yes | Password (must be >= 8 characters) |
 
 ### Responses
+
 * **201 Created:** User successfully registered.
 * **400 Bad Request:** Validation failure (missing fields, invalid email, weak password).
 * **409 Conflict:** Username or email already registered.
 * **500 Internal Server Error:** Database or system error.
 
 ### Examples
+
 **Request:**
+
 ```http
 POST /api/users/register
 Content-Type: application/json
@@ -85,8 +90,13 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password123"
 }
+```
+
+---
 
 ## Section 3: OpenAPI/Swagger Reference
+
+```yaml
 openapi: 3.0.0
 info:
   title: User Registration API
@@ -109,19 +119,23 @@ paths:
         '400': {description: "Validation error"}
         '409': {description: "Conflict"}
         '500': {description: "Server error"}
-
-## Section 4: Developer Usage Guide
-
-1.  **Authentication:** No authentication is required for this public registration endpoint.
-2.  **Request Format:** Send a `POST` request with a `Content-Type: application/json` header and a valid JSON body.
-3.  **Troubleshooting:** * **400 Errors:** Validate that your JSON fields match the required schema (username, email, password).
-    * **409 Errors:** Ensure the username and email are unique; try a different username or check if you already have an account.
+```
 
 ---
 
-##  Section 5: Exercise Reflection
+## Section 4: Developer Usage Guide
+
+1. **Authentication:** No authentication is required for this public registration endpoint.
+2. **Request Format:** Send a `POST` request with a `Content-Type: application/json` header and a valid JSON body.
+3. **Troubleshooting:**
+   * **400 Errors:** Validate that your JSON fields match the required schema (username, email, password).
+   * **409 Errors:** Ensure the username and email are unique; try a different username or check if you already have an account.
+
+---
+
+## Section 5: Exercise Reflection
 
 * **Most challenging part:** Distinguishing between API business rules (like password strength) and system-level errors (server errors).
 * **Prompt Engineering Strategy:** I had to explicitly ask for the error code scenarios (400, 409, 500) to ensure the documentation was comprehensive and useful for debugging.
 * **Format Effectiveness:** OpenAPI is significantly more effective than standard Markdown for large teams, as it allows tools to automatically generate client-side code, whereas Markdown is better for human-readable "Getting Started" guides.
-* **Workflow Integration:** I would automate this documentation generation as part of the CI/CD pipeline so that documentation updates whenever the API endpoint code changes.        
+* **Workflow Integration:** I would automate this documentation generation as part of the CI/CD pipeline so that documentation updates whenever the API endpoint code changes.
